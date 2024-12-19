@@ -33,6 +33,6 @@ jobs:
       # 第五步：使用 Wrangler 发布到 Cloudflare Workers
       - name: Deploy to Cloudflare Workers
         run: |
-          wrangler publish  # 发布到 Cloudflare Workers
+          wrangler deploy  # 使用 wrangler deploy 来替代 wrangler publish
         env:
-          CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}  # 从 GitHub Secrets 获取 API Token
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}  # 从 GitHub Secrets 获取 API Token
